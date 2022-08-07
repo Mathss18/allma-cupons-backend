@@ -1,4 +1,4 @@
-import { EstablishmentUpdateDTO } from "../../../application/use-cases/dto/establishment.dto";
+import { UpdateEstablishmentDTO } from "../../../application/use-cases/establishment/dto/establishment.dto";
 import { Entity } from "../../../shared/entity/entity";
 import { Adress } from "./adress/adress.vo";
 import UniqueEntityId from "../../../shared/value-object/unique-entity-id.vo";
@@ -30,7 +30,7 @@ export class Establishment extends Entity<EstablishmentProps>{
     this.props.createdAt = new Date();
   }
 
-  update(props: EstablishmentUpdateDTO) {
+  update(props: UpdateEstablishmentDTO) {
     this.name = props.name;
     this.logo = props.logo;
     this.phoneNumber = props.phoneNumber;
